@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Explorer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="default-bg">
+
+    <main class="weather-app">
+        <header class="header">
+            <h1>Weather Explorer</h1>
+            <p>Check real-time weather updates instantly</p>
+        </header>
+
+        <section class="search-box">
+            <input id="cityInput" type="text" placeholder="Type city name..." />
+            <button id="searchBtn">Get Weather</button>
+        </section>
+
+        <section class="weather-display">
+            <div class="current">
+                <div class="weather-icon"></div>
+                <div class="weather-info">
+                    <h2 id="cityLabel">City</h2>
+                    <p id="tempLabel">-- °C</p>
+                    <p id="descLabel">--</p>
+                </div>
+            </div>
+
+            <div class="forecast-grid">
+                <div class="forecast-card">
+                    <span class="day-name">Day</span>
+                    <div class="icon"></div>
+                    <span class="day-temp">-- °C</span>
+                </div>
+                <div class="forecast-card">
+                    <span class="day-name">Day</span>
+                    <div class="icon"></div>
+                    <span class="day-temp">-- °C</span>
+                </div>
+                <div class="forecast-card">
+                    <span class="day-name">Day</span>
+                    <div class="icon"></div>
+                    <span class="day-temp">-- °C</span>
+                </div>
+                <div class="forecast-card">
+                    <span class="day-name">Day</span>
+                    <div class="icon"></div>
+                    <span class="day-temp">-- °C</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

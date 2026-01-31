@@ -1,0 +1,140 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+}
+
+.weather-app {
+    background: rgba(30, 30, 30, 0.85);
+    width: 95%;
+    max-width: 620px;
+    padding: 25px;
+    border-radius: 18px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+}
+
+.header h1 {
+    color: #ff9800;
+    font-size: 2.4rem;
+}
+
+.header p {
+    color: #bbb;
+    margin-bottom: 20px;
+}
+
+.search-box {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.search-box input {
+    flex: 1;
+    padding: 12px;
+    border-radius: 30px;
+    border: none;
+    background: #444;
+    color: #fff;
+    outline: none;
+}
+
+.search-box button {
+    padding: 12px 22px;
+    border-radius: 30px;
+    border: none;
+    background: #ff9800;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.search-box button:hover {
+    background: #d97900;
+}
+
+.current {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background: #2e2e2e;
+    padding: 18px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+}
+
+.weather-icon img {
+    width: 85px;
+}
+
+.weather-info h2 {
+    color: #ff9800;
+    font-size: 1.8rem;
+}
+
+.weather-info p {
+    font-size: 1.1rem;
+    color: #fefaf4;
+}
+
+.forecast-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+.forecast-card {
+    background: #2e2e2e;
+    padding: 12px;
+    border-radius: 14px;
+}
+
+.day-name {
+    color: #ff9800;
+    font-weight: bold;
+}
+
+.day-temp {
+    color: #efe7f1;
+    display: block;
+    margin-top: 6px;
+    font-weight: bold;
+}
+
+body.default-bg {
+    background-image: url('https://media.istockphoto.com/id/926497236/photo/tropical-sea-in-summer.jpg');
+}
+/* Weather-based Backgrounds */
+body.sunny {
+    background-image: url("https://images.pexels.com/photos/912110/pexels-photo-912110.jpeg");
+}
+
+body.cloudy {
+    background-image: url("https://images.pexels.com/photos/531756/pexels-photo-531756.jpeg");
+}
+
+body.rainy {
+    background-image: url("https://images.pexels.com/photos/110874/pexels-photo-110874.jpeg");
+}
+
+body.snowy {
+    background-image: url("https://images.pexels.com/photos/688660/pexels-photo-688660.jpeg");
+}
+
+body.misty {
+    background-image: url("https://images.pexels.com/photos/167699/pexels-photo-167699.jpeg");
+}
+body.thunderstorm {
+    background-image: url("https://images.pexels.com/photos/414171/pexels-photo-414171.jpeg");
+}
