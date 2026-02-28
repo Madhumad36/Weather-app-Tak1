@@ -8,52 +8,115 @@
 </head>
 <body class="default-bg">
 
-    <main class="weather-app">
-        <header class="header">
-            <h1>Weather Explorer</h1>
-            <p>Check real-time weather updates instantly</p>
-        </header>
+<main class="weather-app">
+    <header class="header">
+        <h1>Weather Explorer</h1>
+        <p>Smart weather insights, real-time</p>
+    </header>
 
-        <section class="search-box">
-            <input id="cityInput" type="text" placeholder="Type city name..." />
-            <button id="searchBtn">Get Weather</button>
+    <section class="search-box">
+        <input
+            id="cityInput"
+            type="text"
+            placeholder="Enter city or Indian state"
+            aria-label="Enter city or state">
+
+        <button id="searchBtn" aria-label="Search weather">
+            Get Weather
+        </button>
+    </section>
+
+    <section class="action-bar">
+        <button id="locateBtn" aria-label="Use current location">
+            Use My Location
+        </button>
+
+        <button id="unitToggle" aria-label="Toggle temperature unit">
+            degC / degF
+        </button>
+    </section>
+
+    <section class="favorites-bar">
+        <div id="favoriteCities" class="favorite-cities"></div>
+        <div class="favorite-actions">
+            <button id="saveFavoriteBtn" type="button">Save Current City</button>
+            <button id="clearFavoritesBtn" type="button">Clear Favorites</button>
+        </div>
+    </section>
+
+    <div id="loading" class="loading hidden" aria-live="polite">
+        Fetching weather data...
+    </div>
+
+    <div id="alertBanner" class="alert hidden" role="alert"></div>
+
+    <section class="weather-display">
+        <div class="current">
+            <div class="weather-info">
+                <h2 id="cityLabel">City</h2>
+                <p id="tempLabel">-- degC</p>
+                <p id="descLabel">--</p>
+            </div>
+        </div>
+
+        <p id="weatherMood" class="mood-text"></p>
+
+        <div class="extra-info">
+            <p id="feelsLike">Feels like: -- C</p>
+            <p id="humidity">Humidity: --%</p>
+            <p id="wind">Wind: -- km/h</p>
+            <p id="pressure">Pressure: -- hPa</p>
+            <p id="uvIndex">UV Index: --</p>
+            <p id="sunInfo">Sun: -- / --</p>
+        </div>
+
+        <section class="air-quality" id="airQualityCard">
+            <h3>Air Quality</h3>
+            <p id="aqiValue">US AQI: --</p>
+            <p id="pm25Value">PM2.5: -- ug/m3</p>
+            <p id="pm10Value">PM10: -- ug/m3</p>
+            <p id="aqiBand">Band: --</p>
         </section>
 
-        <section class="weather-display">
-            <div class="current">
-                <div class="weather-icon"></div>
-                <div class="weather-info">
-                    <h2 id="cityLabel">City</h2>
-                    <p id="tempLabel">-- °C</p>
-                    <p id="descLabel">--</p>
-                </div>
-            </div>
-
-            <div class="forecast-grid">
-                <div class="forecast-card">
-                    <span class="day-name">Day</span>
-                    <div class="icon"></div>
-                    <span class="day-temp">-- °C</span>
-                </div>
-                <div class="forecast-card">
-                    <span class="day-name">Day</span>
-                    <div class="icon"></div>
-                    <span class="day-temp">-- °C</span>
-                </div>
-                <div class="forecast-card">
-                    <span class="day-name">Day</span>
-                    <div class="icon"></div>
-                    <span class="day-temp">-- °C</span>
-                </div>
-                <div class="forecast-card">
-                    <span class="day-name">Day</span>
-                    <div class="icon"></div>
-                    <span class="day-temp">-- °C</span>
-                </div>
-            </div>
+        <section class="hourly-section">
+            <h3>Next 12 Hours</h3>
+            <div id="hourlyStrip" class="hourly-strip"></div>
         </section>
-    </main>
 
-    <script src="script.js"></script>
+        <div class="forecast-grid" id="forecastGrid">
+            <div class="forecast-card">
+                <span class="day-name">Day</span>
+                <div class="icon" aria-label="Forecast weather icon"></div>
+                <span class="day-range">H: -- / L: --</span>
+                <span class="day-rain">Rain: --%</span>
+            </div>
+
+            <div class="forecast-card">
+                <span class="day-name">Day</span>
+                <div class="icon" aria-label="Forecast weather icon"></div>
+                <span class="day-range">H: -- / L: --</span>
+                <span class="day-rain">Rain: --%</span>
+            </div>
+
+            <div class="forecast-card">
+                <span class="day-name">Day</span>
+                <div class="icon" aria-label="Forecast weather icon"></div>
+                <span class="day-range">H: -- / L: --</span>
+                <span class="day-rain">Rain: --%</span>
+            </div>
+
+            <div class="forecast-card">
+                <span class="day-name">Day</span>
+                <div class="icon" aria-label="Forecast weather icon"></div>
+                <span class="day-range">H: -- / L: --</span>
+                <span class="day-rain">Rain: --%</span>
+            </div>
+        </div>
+    </section>
+</main>
+
+<div id="weatherAura" aria-hidden="true"></div>
+
+<script src="script.js"></script>
 </body>
 </html>
