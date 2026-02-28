@@ -1,42 +1,59 @@
 # Weather Explorer
 
-Weather Explorer is a responsive weather app that now works without any API key setup.
+Weather Explorer is a responsive, API-key-free weather app built with plain HTML, CSS, and JavaScript.
 
-## What Changed
+## Highlights
 
-- Removed API key prompt/input flow completely
-- Migrated weather data to Open-Meteo (no key required)
-- Added extra weather details:
-  - Pressure
-  - UV Index
-  - Sunrise/Sunset times
-- Added air quality insights (US AQI, PM2.5, PM10)
-- Added next 12-hour timeline
-- Added favorite city chips for one-click weather lookup
-- Kept weather effects, mood text, forecast cards, unit toggle, and location support
+- No API key required (powered by Open-Meteo)
+- Search by city or supported Indian state names
+- Current weather with 4-day forecast
+- 12-hour timeline (temperature, rain chance, condition code)
+- Air quality insights (US AQI, PM2.5, PM10)
+- Extra details: feels like, humidity, wind, pressure, UV, sunrise/sunset
+- Dynamic backgrounds and weather aura effects
+- Favorites with localStorage persistence
+- Celsius/Fahrenheit unit toggle
+- Current location support (browser geolocation)
 
-## Features
+## Tech Stack
 
-- Search by city or mapped Indian state capital
-- Current weather + 4-day forecast
-- Daily high/low and rain probability
-- Dynamic visual effects by weather type
-- Air quality card with AQI band
-- Hourly strip (temperature, rain chance, condition marker)
-- Favorite cities (saved in localStorage)
-- Celsius/Fahrenheit toggle
-- Current location weather
-- Loading skeleton and disabled controls while fetching
+- `index.html` for structure
+- `styles.css` for layout, theme, and animations
+- `script.js` for API calls, state, rendering, and interactions
 
-## Project Structure
+## Quick Start
 
-- `index.html` - app structure
-- `styles.css` - styles and animations
-- `script.js` - fetch + render logic
-- `README.md` - documentation
+1. Clone or download this project.
+2. Open `index.html` in a browser.
+3. Search for a city and view live weather data.
 
-## Run
+No build tools, package install, or API key setup is needed.
 
-1. Open `index.html` in browser.
-2. Enter city/state and click `Get Weather`.
-3. No API key is needed.
+## Recommended Local Run
+
+For best browser behavior (especially geolocation), run via a local server instead of opening files directly:
+
+```bash
+python -m http.server 8080
+```
+
+Then open `http://localhost:8080`.
+
+## Deployment
+
+This is a static site and can be hosted on:
+
+- GitHub Pages
+- Netlify
+- Vercel
+
+Upload/push these files as-is:
+
+- `index.html`
+- `styles.css`
+- `script.js`
+
+## Notes
+
+- Favorites and last searched city are stored in browser localStorage.
+- Geolocation requires browser permission and works best over HTTPS.
